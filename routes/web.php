@@ -12,6 +12,13 @@ Route::get('/ariev', function () {
     return view('view-belajar');
 });
 
+
+// Menggunakan array assosiatif
+Route::get('/produk/create', [ProdukController::class, 'create']);
+
+Route::post('/produk/create', [ProdukController::class, 'store']);
+
+
 // Menggunakan array assosiatif
 Route::get('/belajar-kirim-data', [ProdukController::class, 'index']);
 
